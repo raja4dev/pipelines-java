@@ -1,14 +1,5 @@
 # Maven
-- task: ArtifactoryMaven@2
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'install'
-    artifactoryResolverService: 'art-test'
-    targetResolveReleaseRepo: 'maven'
-    targetResolveSnapshotRepo: 'maven'
-    artifactoryDeployService: 'art-test'
-    targetDeployReleaseRepo: 'maven'
-    targetDeploySnapshotRepo: 'maven'
+
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -20,6 +11,16 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: ArtifactoryMaven@2
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'install'
+    artifactoryResolverService: 'art-test'
+    targetResolveReleaseRepo: 'maven'
+    targetResolveSnapshotRepo: 'maven'
+    artifactoryDeployService: 'art-test'
+    targetDeployReleaseRepo: 'maven'
+    targetDeploySnapshotRepo: 'maven'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
