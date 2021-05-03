@@ -47,18 +47,5 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-<distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>artifactory-releases</name>
-        <url>https://roja.jfrog.io/artifactory/mvn-libs-release-local</url>
-    </repository>
-
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>artifactory-snapshots</name>
-        <url>https://roja.jfrog.io/artifactory/mvn-libs-snapshot-local</url>
-    </snapshotRepository>
-</distributionManagement>
 	
 </project>
