@@ -35,10 +35,6 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'install'
-- task: ArtifactoryMaven@2
-  inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'install'
     artifactoryResolverService: 'art-test'
     targetResolveReleaseRepo: 'mvn-libs-release-local'
     targetResolveSnapshotRepo: 'mvn-libs-snapshot-local'
