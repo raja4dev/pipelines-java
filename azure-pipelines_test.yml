@@ -19,13 +19,12 @@ steps:
   displayName: 'Run a multi-line script'
 
 - task: ArtifactoryMaven@2
-- task: ArtifactoryMaven@2
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'install'
     artifactoryResolverService: 'art-test'
-    targetResolveReleaseRepo: 'mvn-libs-release'
-    targetResolveSnapshotRepo: 'mvn-libs-snapshot'
+    targetResolveReleaseRepo: 'mvn-libs-release-local'
+    targetResolveSnapshotRepo: 'mvn-libs-snapshot-local'
     artifactoryDeployService: 'art-test'
     targetDeployReleaseRepo: 'mvn-libs-release-local'
     targetDeploySnapshotRepo: 'mvn-libs-snapshot-local'
